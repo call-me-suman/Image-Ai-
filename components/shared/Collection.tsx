@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
-// import { CldImage } from "next-cloudinary";
+import { CldImage } from "next-cloudinary";
 
 import {
   Pagination,
@@ -98,7 +98,7 @@ const Card = ({ image }: { image: IImage }) => {
   return (
     <li>
       <Link href={`/transformations/${image._id}`} className="collection-card">
-        {/* <CldImage
+        <CldImage
           src={image.publicId}
           alt={image.title}
           width={image.width}
@@ -121,9 +121,8 @@ const Card = ({ image }: { image: IImage }) => {
             alt={image.title}
             width={24}
             height={24}
-          /> */}
-        {/* </div> */}
+          /> </div>
       </Link>
     </li>
   );
-};
+}; 

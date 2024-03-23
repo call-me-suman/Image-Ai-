@@ -69,7 +69,8 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
  
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
+    console.log(values)
+    
 
     if(data || image) {
       const transformationUrl = getCldImageUrl({
