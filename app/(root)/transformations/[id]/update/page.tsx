@@ -1,3 +1,4 @@
+
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
@@ -7,19 +8,26 @@ import { transformationTypes } from "@/constants";
 import { getUserById } from "@/lib/actions/user.action";
 import { getImageById } from "@/lib/actions/image.action";
 
+
+
+
 const Page = async ({ params: { id } }: SearchParamProps) => {
   const { userId } = auth();
+
+  
 
   if (!userId) redirect("/sign-in");
 
   const user = await getUserById(userId);
   const image = await getImageById(id);
 
+
   const transformation =
     transformationTypes[image.transformationType as TransformationTypeKey];
 
   return (
     <>
+    
       <Header title={transformation.title} subtitle={transformation.subTitle} />
 
       <section className="mt-10">

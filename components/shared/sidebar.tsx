@@ -9,9 +9,12 @@ import { Button } from '../ui/button'
 
 const SideBar = () => {
     const pathname = usePathname()
+   
+
   return (
     
     <aside className='sidebar'> 
+   
           <div className='flex flex-col gap-4' >
             <Link href = "/" className = "sidebar-logo" >
                 <Image src="/assets/images/logo-text.svg" width={180} height={28} alt="logo"/>
@@ -19,7 +22,6 @@ const SideBar = () => {
             <nav className='sidebar-nav flex'>
 <SignedIn>
 <ul className='sidebar-nav_elements'>
-
 {navLinks.slice(0,6).map((link) =>{
     const isActive = link.route === pathname
 

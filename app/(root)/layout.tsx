@@ -1,6 +1,6 @@
 import React from 'react'
-import SideBar from '@/components/shared/sidebar'
-import MobileNav from '@/components/shared/mobileNav'
+import SideBar from '@/components/shared/Sidebar'
+import MobileNav from '@/components/shared/MobileNav'
 const Layout = ({ children }:{children :React.ReactNode}) => {
   return (
 
