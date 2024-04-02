@@ -7,6 +7,7 @@ import Link from "next/link"
 const Home = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
   const searchQuery = (searchParams?.query as string) || '';
+  console.log(searchParams)
 
   const images = await getAllImages({ page, searchQuery})
   
@@ -35,7 +36,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
       <section className="sm:mt-12">
         <Collection 
-          hasSearch={true}
+          
           images={images?.data}
           totalPages={images?.totalPage}
           page={page}
