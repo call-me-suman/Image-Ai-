@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from '@/components/shared/Sidebar'
 import MobileNav from '@/components/shared/MobileNav'
+
 const Layout = ({ children }:{children :React.ReactNode}) => {
   return (
 
@@ -18,3 +19,5 @@ const Layout = ({ children }:{children :React.ReactNode}) => {
 }
 
 export default Layout
+
+
